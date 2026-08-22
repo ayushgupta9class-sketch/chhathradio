@@ -17,7 +17,6 @@ const PRESENCE_CHANNEL = 'chhath-radio-listeners';
 const siteConfig = window.CHATH_RADIO_CONFIG || {};
 
 const els = {
-  time: document.getElementById('live-time'),
   listenerCount: document.getElementById('listener-count'),
   status: document.getElementById('live-status'),
   title: document.getElementById('player-title'),
@@ -44,16 +43,6 @@ let supabaseClient = null;
 let listenerChannel = null;
 let presenceReady = false;
 let listenerTracked = false;
-
-function updateClock() {
-  if (!els.time) return;
-  const now = new Date();
-  els.time.textContent = now.toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  });
-}
 
 function setListenerCount(count) {
   if (!els.listenerCount) return;
@@ -353,7 +342,5 @@ window.addEventListener('pagehide', () => {
   untrackListener();
 });
 
-updateClock();
-window.setInterval(updateClock, 30_000);
 initAnalytics();
 initListenerPresence();

@@ -14,11 +14,24 @@
       <div class="hero-shade" aria-hidden="true"></div>
 
       <div class="topbar">
-        <div class="live-badge glass" aria-label="Chhath Radio live status">
-          <span id="live-time">--:--</span>
-          <span class="live-dot" aria-hidden="true"></span>
-          <span id="listener-count" aria-live="polite">— listening</span>
-          <span id="live-status" hidden>Live</span>
+        <div class="top-left">
+          <a class="brand-mark" href="#hero-title" aria-label="Chhath Radio home">
+            <span class="brand-symbol" aria-hidden="true">
+              <svg viewBox="0 0 56 46" focusable="false">
+                <path d="M13 25a15 15 0 0 1 30 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M9 31c8-4 15-4 23 0s15 4 23 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M13 36c7-3 13-3 19 0s13 3 20 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+                <path d="M28 3v7M11 11l5 5M45 11l-5 5M4 24h7M45 24h7M17 5l3 6M39 5l-3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="brand-name">Chhath Radio</span>
+          </a>
+
+          <div class="live-badge glass" aria-label="Chhath Radio live listeners">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span id="listener-count" aria-live="polite">— listening</span>
+            <span id="live-status" hidden>Live</span>
+          </div>
         </div>
 
         <div class="top-actions">
@@ -64,7 +77,9 @@
         <div class="ornament" aria-hidden="true"><span></span><b>✦</b><span></span></div>
 
         <section class="player-card glass-strong" aria-label="Chhath Radio player">
-          <img id="player-art" class="player-art" src="assets/chhath-background.png" alt="Current Chhath song artwork">
+          <div class="player-art-wrap">
+            <img id="player-art" class="player-art" src="assets/chhath-background.png" alt="Current Chhath song artwork">
+          </div>
 
           <div class="track-copy">
             <h2 id="player-title">Chhath Radio</h2>
@@ -85,20 +100,13 @@
         </section>
 
         <nav class="category-row" aria-label="Chhath song categories">
-          <button class="category-chip is-active" type="button" data-category="Traditional"><span>♨</span>Traditional</button>
-          <button class="category-chip" type="button" data-category="Sharda Sinha"><span>♙</span>Sharda Sinha</button>
-          <button class="category-chip" type="button" data-category="Morning Arghya"><span>♨</span>Morning Arghya</button>
-          <button class="category-chip" type="button" data-category="Evening Arghya"><span>♧</span>Evening Arghya</button>
-          <button class="category-chip" type="button" data-category="Classics"><span>◎</span>Classics</button>
+          <button class="category-chip is-active" type="button" data-category="Traditional">
+            <span class="category-icon" aria-hidden="true">♨</span>Traditional
+          </button>
+          <button class="category-chip" type="button" data-category="Classics">
+            <span class="category-icon" aria-hidden="true">☆</span>Classics
+          </button>
         </nav>
-
-        <div class="festival-strip glass-strong" aria-label="Chhath 2026 dates">
-          <div class="festival-title"><span aria-hidden="true">▣</span><strong>Chhath 2026</strong></div>
-          <div class="festival-item"><span aria-hidden="true">◡</span><span>Nahay Khay – 13 Nov</span></div>
-          <div class="festival-item"><span aria-hidden="true">◒</span><span>Kharna – 14 Nov</span></div>
-          <div class="festival-item"><span aria-hidden="true">☀</span><span>Sandhya Arghya – 15 Nov</span></div>
-          <div class="festival-item"><span aria-hidden="true">☀</span><span>Usha Arghya – 16 Nov</span></div>
-        </div>
       </div>
 
       <div class="identity-row" aria-label="Creator links">
@@ -125,11 +133,11 @@
         <div class="feature-grid">
           <article class="info-card">
             <h3>Curated for Chhath</h3>
-            <p>Traditional favourites, Sharda Sinha classics, morning arghya songs, evening arghya songs and newer Chhath releases in one mix.</p>
+            <p>Traditional favourites and timeless Chhath classics, carefully curated into one simple listening experience.</p>
           </article>
           <article class="info-card">
             <h3>Simple listening</h3>
-            <p>A focused player with play, pause, skip, seek and category controls designed for desktop and mobile.</p>
+            <p>A focused player with play, pause, skip, seek and two simple category controls designed for desktop and mobile.</p>
           </article>
           <article class="info-card">
             <h3>No account needed</h3>
