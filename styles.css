@@ -123,7 +123,7 @@ a {
 .top-actions {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
 }
 
 .support-button,
@@ -144,50 +144,59 @@ a {
   -webkit-backdrop-filter: blur(12px) saturate(112%);
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  padding: 0 20px;
-  min-height: 45px;
+  gap: 7px;
+  padding: 0 16px;
+  min-height: 40px;
   border-radius: 999px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
-.support-button:hover,
-.youtube-button:hover {
+.support-button:hover {
   background: linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,241,218,.12));
   border-color: rgba(255, 245, 228, .38);
   transform: translateY(-1px);
 }
 
+.youtube-button:hover {
+  background: transparent;
+  border-color: transparent;
+  transform: translateY(-1px) scale(1.03);
+}
+
 .support-icon {
-  width: 19px;
-  height: 19px;
+  width: 17px;
+  height: 17px;
   display: grid;
   place-items: center;
   color: #ffd36e;
 }
 
 .support-icon svg {
-  width: 19px;
-  height: 19px;
+  width: 17px;
+  height: 17px;
   display: block;
 }
 
 .youtube-button {
-  backdrop-filter: blur(12px) saturate(112%);
-  -webkit-backdrop-filter: blur(12px) saturate(112%);
-  width: 41px;
-  height: 41px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .youtube-music-icon,
 .youtube-music-icon svg {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   display: block;
+  filter: drop-shadow(0 4px 9px rgba(28, 14, 7, .16));
 }
 
 .hero-content {
@@ -297,25 +306,27 @@ a {
 
 .player-card {
   margin-top: 142px;
-  width: min(100%, 675px);
-  min-height: 153px;
-  border-radius: 27px;
-  padding: 14px 18px 14px 14px;
+  width: min(100%, 655px);
+  min-height: 132px;
+  border-radius: 24px;
+  padding: 12px 16px 12px 12px;
   display: grid;
-  grid-template-columns: 106px minmax(0, 1fr) 185px;
-  gap: 18px;
+  grid-template-columns: 92px minmax(0, 1fr) 166px;
+  gap: 14px;
   align-items: center;
   box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.13);
   text-align: left;
 }
 
 .player-art {
-  width: 106px;
-  height: 106px;
+  width: 92px;
+  height: 92px;
   display: block;
-  border-radius: 15px;
+  border-radius: 14px;
   object-fit: cover;
-  box-shadow: 0 9px 23px rgba(25, 11, 5, .28);
+  object-position: center;
+  background: transparent;
+  box-shadow: 0 7px 18px rgba(25, 11, 5, .20);
 }
 
 .track-copy {
@@ -333,7 +344,7 @@ a {
 }
 
 .track-copy p {
-  margin: 0 0 22px;
+  margin: 0 0 16px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -385,12 +396,12 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .control-button {
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   border: 1px solid rgba(255, 245, 225, .12);
   border-radius: 50%;
   background: linear-gradient(145deg, rgba(255,255,255,.11), rgba(255,255,255,.055));
@@ -423,8 +434,8 @@ a {
 }
 
 .control-main {
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   border: 1px solid rgba(246, 195, 107, .72);
   background: linear-gradient(145deg, rgba(255, 218, 148, .11), rgba(255,255,255,.05));
   color: #fffdf7;
@@ -744,12 +755,12 @@ a {
 
   .player-card {
     width: min(100%, 640px);
-    grid-template-columns: 96px minmax(0, 1fr) 160px;
+    grid-template-columns: 88px minmax(0, 1fr) 152px;
   }
 
   .player-art {
-    width: 96px;
-    height: 96px;
+    width: 88px;
+    height: 88px;
   }
 
   .festival-strip {
@@ -789,8 +800,8 @@ a {
   }
 
   .youtube-button {
-    width: 39px;
-    height: 39px;
+    width: 32px;
+    height: 32px;
   }
 
   .top-actions {

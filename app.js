@@ -171,7 +171,7 @@ function setPlayIcon(isPlaying) {
 }
 
 function videoThumbnail(videoId) {
-  return videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : 'assets/chhath-background.png';
+  return videoId ? `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg` : 'assets/chhath-background.png';
 }
 
 function updateMetadata() {
