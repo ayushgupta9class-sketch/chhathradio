@@ -1,9 +1,9 @@
 export const CATEGORY_INDEXES = Object.freeze({
-  'Traditional': Array.from({ length: 23 }, (_, i) => i),
+  'Traditional': [8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,0,1,2,3,4,5,6,7],
   'Sharda Sinha': [0,1,2,3,4,5,6,7],
   'Morning Arghya': [6,7,10,9,13,14,24,27],
   'Evening Arghya': [2,8,12,15,17,19,22,23,28],
-  'Classics': Array.from({ length: 17 }, (_, i) => i),
+  'Classics': [2,0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
 });
 
 export function createQueueState(playlistLength) {

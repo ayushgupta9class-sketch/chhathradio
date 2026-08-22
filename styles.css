@@ -128,50 +128,66 @@ a {
 
 .support-button,
 .youtube-button {
-  border: 0;
   color: #fffaf1;
   cursor: pointer;
   text-decoration: none;
+  border: 1px solid rgba(255, 244, 225, .27);
+  background: linear-gradient(135deg, rgba(255,255,255,.17), rgba(255,241,218,.09));
+  box-shadow: 0 8px 22px rgba(39, 20, 8, .13), inset 0 1px 0 rgba(255,255,255,.13);
+  backdrop-filter: blur(12px) saturate(112%);
+  -webkit-backdrop-filter: blur(12px) saturate(112%);
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
 }
 
 .support-button {
+  backdrop-filter: blur(12px) saturate(112%);
+  -webkit-backdrop-filter: blur(12px) saturate(112%);
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 22px;
-  min-height: 47px;
+  gap: 9px;
+  padding: 0 20px;
+  min-height: 45px;
   border-radius: 999px;
-  font-size: 17px;
+  font-size: 16px;
 }
 
-.support-button span:first-child {
-  color: #ffd271;
+.support-button:hover,
+.youtube-button:hover {
+  background: linear-gradient(135deg, rgba(255,255,255,.22), rgba(255,241,218,.12));
+  border-color: rgba(255, 245, 228, .38);
+  transform: translateY(-1px);
+}
+
+.support-icon {
+  width: 19px;
+  height: 19px;
+  display: grid;
+  place-items: center;
+  color: #ffd36e;
+}
+
+.support-icon svg {
+  width: 19px;
+  height: 19px;
+  display: block;
 }
 
 .youtube-button {
-  width: 42px;
-  height: 42px;
+  backdrop-filter: blur(12px) saturate(112%);
+  -webkit-backdrop-filter: blur(12px) saturate(112%);
+  width: 41px;
+  height: 41px;
   border-radius: 50%;
   display: grid;
   place-items: center;
+  padding: 0;
 }
 
-.yt-ring {
-  width: 24px;
-  height: 24px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #fff;
-}
-
-.yt-triangle {
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 8px solid #e11;
-  margin-left: 2px;
+.youtube-music-icon,
+.youtube-music-icon svg {
+  width: 25px;
+  height: 25px;
+  display: block;
 }
 
 .hero-content {
@@ -375,24 +391,50 @@ a {
 .control-button {
   width: 46px;
   height: 46px;
-  border: 0;
+  border: 1px solid rgba(255, 245, 225, .12);
   border-radius: 50%;
-  background: rgba(255,255,255,.08);
+  background: linear-gradient(145deg, rgba(255,255,255,.11), rgba(255,255,255,.055));
   color: #fff;
   cursor: pointer;
   display: grid;
   place-items: center;
   font-size: 17px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+  box-shadow: 0 7px 18px rgba(25, 13, 7, .12), inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter: blur(10px) saturate(108%);
+  -webkit-backdrop-filter: blur(10px) saturate(108%);
+  transition: transform .16s ease, background .16s ease, border-color .16s ease;
+}
+
+.control-button:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(145deg, rgba(255,255,255,.16), rgba(255,255,255,.075));
+  border-color: rgba(255, 245, 225, .22);
+}
+
+.control-button:active {
+  transform: translateY(0) scale(.97);
+}
+
+.control-button svg {
+  width: 19px;
+  height: 19px;
+  display: block;
+  pointer-events: none;
 }
 
 .control-main {
   width: 56px;
   height: 56px;
-  border: 1px solid rgba(246, 195, 107, .75);
-  background: rgba(255, 241, 208, .04);
-  color: #fff;
+  border: 1px solid rgba(246, 195, 107, .72);
+  background: linear-gradient(145deg, rgba(255, 218, 148, .11), rgba(255,255,255,.05));
+  color: #fffdf7;
   font-size: 20px;
+  box-shadow: 0 8px 22px rgba(37, 18, 8, .16), inset 0 0 0 1px rgba(255,255,255,.035);
+}
+
+.control-main svg {
+  width: 22px;
+  height: 22px;
 }
 
 .category-row {

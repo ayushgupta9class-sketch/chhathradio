@@ -150,9 +150,23 @@ function initListenerPresence() {
   return true;
 }
 
+function controlIconMarkup(name) {
+  const common = 'viewBox="0 0 24 24" aria-hidden="true" focusable="false"';
+  if (name === 'pause') {
+    return `<svg ${common}><rect x="7" y="5" width="3.6" height="14" rx="1.45" fill="currentColor"/><rect x="13.4" y="5" width="3.6" height="14" rx="1.45" fill="currentColor"/></svg>`;
+  }
+  if (name === 'previous') {
+    return `<svg ${common}><path d="M18.5 5.2 9.2 12l9.3 6.8V5.2Z" fill="currentColor"/><path d="M5.5 18.5v-13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>`;
+  }
+  if (name === 'next') {
+    return `<svg ${common}><path d="M5.5 5.2 14.8 12l-9.3 6.8V5.2Z" fill="currentColor"/><path d="M18.5 5.5v13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>`;
+  }
+  return `<svg ${common}><path d="M8.4 5.2 19 12 8.4 18.8V5.2Z" fill="currentColor"/></svg>`;
+}
+
 function setPlayIcon(isPlaying) {
   if (!els.play) return;
-  els.play.textContent = isPlaying ? 'Ⅱ' : '▶';
+  els.play.innerHTML = controlIconMarkup(isPlaying ? 'pause' : 'play');
   els.play.setAttribute('aria-label', isPlaying ? 'Pause' : 'Play');
 }
 
