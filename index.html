@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2a180f">
+  <meta name="description" content="Chhath Radio — timeless and modern Chhath geet, one tap away.">
+  <title>छठी मईया के गीत — Chhath Radio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="topbar">
+        <div class="live-badge glass" aria-label="Chhath Radio live status">
+          <span id="live-time">--:--</span>
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="listener-count" aria-live="polite">— listening</span>
+          <span id="live-status" hidden>Live</span>
+        </div>
+
+        <div class="top-actions">
+          <button id="support-open" class="support-button glass" type="button" aria-haspopup="dialog">
+            <span aria-hidden="true">☕</span>
+            <span>Support Here</span>
+          </button>
+          <a
+            id="youtube-music-link"
+            class="youtube-button glass"
+            href="https://music.youtube.com/playlist?list=PLBSxfi3wN5KA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Chhath Radio playlist on YouTube Music"
+            title="YouTube Music"
+          >
+            <span class="yt-ring"><span class="yt-triangle"></span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="sun-mark" aria-hidden="true">
+          <span class="sun-core"></span>
+          <span class="sun-wave wave-one"></span>
+          <span class="sun-wave wave-two"></span>
+        </div>
+
+        <h1 id="hero-title">छठी मईया के गीत</h1>
+        <p class="hero-kicker">CHHATH WALA MUSIC</p>
+        <div class="ornament" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+
+        <section class="player-card glass-strong" aria-label="Chhath Radio player">
+          <img id="player-art" class="player-art" src="assets/chhath-background.png" alt="Current Chhath song artwork">
+
+          <div class="track-copy">
+            <h2 id="player-title">Chhath Radio</h2>
+            <p id="player-artist">YouTube Music playlist</p>
+
+            <div class="timeline-row">
+              <span id="elapsed">0:00</span>
+              <input id="progress" type="range" min="0" max="1000" value="0" aria-label="Song progress">
+              <span id="duration">0:00</span>
+            </div>
+          </div>
+
+          <div class="player-controls" aria-label="Playback controls">
+            <button id="prev-track" class="control-button" type="button" aria-label="Previous track">◀</button>
+            <button id="play-toggle" class="control-button control-main" type="button" aria-label="Play">▶</button>
+            <button id="next-track" class="control-button" type="button" aria-label="Next track">▶</button>
+          </div>
+        </section>
+
+        <nav class="category-row" aria-label="Chhath song categories">
+          <button class="category-chip is-active" type="button" data-category="Traditional"><span>♨</span>Traditional</button>
+          <button class="category-chip" type="button" data-category="Sharda Sinha"><span>♙</span>Sharda Sinha</button>
+          <button class="category-chip" type="button" data-category="Morning Arghya"><span>♨</span>Morning Arghya</button>
+          <button class="category-chip" type="button" data-category="Evening Arghya"><span>♧</span>Evening Arghya</button>
+          <button class="category-chip" type="button" data-category="Classics"><span>◎</span>Classics</button>
+        </nav>
+
+        <div class="festival-strip glass-strong" aria-label="Chhath 2026 dates">
+          <div class="festival-title"><span aria-hidden="true">▣</span><strong>Chhath 2026</strong></div>
+          <div class="festival-item"><span aria-hidden="true">◡</span><span>Nahay Khay – 13 Nov</span></div>
+          <div class="festival-item"><span aria-hidden="true">◒</span><span>Kharna – 14 Nov</span></div>
+          <div class="festival-item"><span aria-hidden="true">☀</span><span>Sandhya Arghya – 15 Nov</span></div>
+          <div class="festival-item"><span aria-hidden="true">☀</span><span>Usha Arghya – 16 Nov</span></div>
+        </div>
+      </div>
+
+      <div class="identity-row" aria-label="Creator links">
+        <span>✦</span>
+        <span>Visit my site</span>
+        <a href="https://ayushgupta.site" target="_blank" rel="noopener noreferrer">ayushgupta.site</a>
+        <span class="identity-separator">•</span>
+        <a id="instagram-link" class="instagram-link" href="https://www.instagram.com/chhathradio.in/?hl=en" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">◎</span> Instagram</a>
+        <span class="identity-separator">•</span>
+        <span aria-hidden="true">⌖</span>
+        <span>Ayush Gupta from Motihari, Bihar</span>
+      </div>
+
+      <div id="youtube-player" class="youtube-player" aria-hidden="true"></div>
+    </section>
+
+    <section class="info-section" aria-labelledby="about-title">
+      <div class="info-wrap">
+        <p class="eyebrow">CHHATH GEET, ONE TAP AWAY</p>
+        <h2 id="about-title">About Chhath Radio</h2>
+        <p class="info-lead">Chhath Radio is a simple, free playlist experience for timeless and modern Chhath geet. Open the page, press play, and keep the music running — no signup or app required.</p>
+        <p class="creator-credit">Created by Ayush Gupta · <a href="https://www.instagram.com/aashuguptavanshi/?hl=en" target="_blank" rel="noopener noreferrer">@aashuguptavanshi</a></p>
+
+        <div class="feature-grid">
+          <article class="info-card">
+            <h3>Curated for Chhath</h3>
+            <p>Traditional favourites, Sharda Sinha classics, morning arghya songs, evening arghya songs and newer Chhath releases in one mix.</p>
+          </article>
+          <article class="info-card">
+            <h3>Simple listening</h3>
+            <p>A focused player with play, pause, skip, seek and category controls designed for desktop and mobile.</p>
+          </article>
+          <article class="info-card">
+            <h3>No account needed</h3>
+            <p>Listen directly here, or open the same public playlist on YouTube Music whenever you want.</p>
+          </article>
+        </div>
+
+        <h2 class="faq-title">About this Chhath playlist</h2>
+        <div class="feature-grid">
+          <article class="info-card">
+            <h3>What is Chhath Radio?</h3>
+            <p>A browser-based Chhath music player built for easy, uninterrupted festival listening.</p>
+          </article>
+          <article class="info-card">
+            <h3>Does it work on a phone?</h3>
+            <p>Yes. The page is responsive and the player controls are designed to remain easy to use on smaller screens.</p>
+          </article>
+          <article class="info-card">
+            <h3>Where does the music play from?</h3>
+            <p>The songs play through YouTube. Chhath Radio does not host or redistribute the music files.</p>
+          </article>
+        </div>
+
+        <a class="playlist-cta" href="https://music.youtube.com/playlist?list=PLBSxfi3wN5KA" target="_blank" rel="noopener noreferrer">Open the playlist on YouTube Music ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="support-dialog" class="support-dialog">
+    <div class="support-modal">
+      <button id="support-close" class="modal-close" type="button" aria-label="Close support dialog">×</button>
+      <p class="eyebrow">INDEPENDENT PROJECT</p>
+      <h2>Support Chhath Radio</h2>
+      <p>Chhath Radio is an independent project made to keep Chhath geet easy to discover and listen to.</p>
+      <p>Optional support may help with website hosting, development and future community activities. No payment is required to use Chhath Radio.</p>
+      <button class="coming-soon" type="button" disabled>Support payments coming soon</button>
+    </div>
+  </dialog>
+
+  <script src="site-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
