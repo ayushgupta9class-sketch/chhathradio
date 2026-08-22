@@ -33,6 +33,11 @@ const els = {
   supportDialog: document.getElementById('support-dialog'),
 };
 
+const heroRoot = document.querySelector('.hero');
+function revealLivePlayer() {
+  heroRoot?.classList.add('player-live');
+}
+
 let player = null;
 let playerReady = false;
 let progressTimer = null;
@@ -279,6 +284,7 @@ window.onYouTubeIframeAPIReady = initYouTubePlayer;
 if (window.YT?.Player) initYouTubePlayer();
 
 els.play?.addEventListener('click', () => {
+  revealLivePlayer();
   if (!playerReady || !player) return;
   const state = player.getPlayerState?.();
   if (state === window.YT?.PlayerState?.PLAYING) {
@@ -293,8 +299,8 @@ els.play?.addEventListener('click', () => {
   }
 });
 
-els.previous?.addEventListener('click', playPreviousFromQueue);
-els.next?.addEventListener('click', playNextFromQueue);
+els.previous?.addEventListener('click', () => { revealLivePlayer(); playPreviousFromQueue(); });
+els.next?.addEventListener('click', () => { revealLivePlayer(); playNextFromQueue(); });
 
 els.progress?.addEventListener('input', () => {
   if (!playerReady || !player) return;
@@ -308,6 +314,7 @@ els.progress?.addEventListener('input', () => {
 
 document.querySelectorAll('.category-chip').forEach((chip) => {
   chip.addEventListener('click', () => {
+    revealLivePlayer();
     const category = chip.dataset.category;
     const playlist = playerReady ? player?.getPlaylist?.() : null;
     const length = Array.isArray(playlist) && playlist.length ? playlist.length : queueState.playlistLength || 30;
